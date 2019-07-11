@@ -720,13 +720,6 @@ vendor/bin/hw/vendor.qti.hardware.qdutils_disp@1.0-service-qti
 vendor/etc/init/vendor.qti.hardware.qdutils_disp@1.0-service-qti.rc
 vendor/lib/vendor.qti.hardware.qdutils_disp@1.0.so
 
-# SSR
-vendor/bin/ssr_diag
-vendor/bin/ssr_setup
-vendor/bin/subsystem_ramdump
-vendor/lib/libSubSystemShutdown.so
-vendor/lib/libsubsystem_control.so
-
 # Samsung
 vendor/lib/lib_SoundAlive_3DPosition_ver202.so
 vendor/lib/lib_SoundAlive_SRC384_ver320.so
