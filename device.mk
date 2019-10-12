@@ -42,9 +42,10 @@ PRODUCT_PACKAGES += \
     com.dsi.ant.antradio_library \
     libantradio
 
-# Audio (copied from samsung-msm8937-devs, may need adjustment)
+# Audio
 PRODUCT_PACKAGES += \
     audio.a2dp.default \
+    audio.bluetooth.default \
     audio.primary.msm8937 \
     audio.r_submix.default \
     audio.usb.default \
@@ -57,7 +58,8 @@ PRODUCT_PACKAGES += \
     android.hardware.audio.service \
     android.hardware.audio@2.0-impl \
     android.hardware.audio.effect@2.0-service \
-    android.hardware.audio.effect@2.0-impl
+    android.hardware.audio.effect@2.0-impl \
+    android.hardware.bluetooth.audio@2.0-impl
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/audio_effects.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.xml \
