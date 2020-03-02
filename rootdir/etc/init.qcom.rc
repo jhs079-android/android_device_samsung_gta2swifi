@@ -898,11 +898,6 @@ service qcom-sh /vendor/bin/init.qcom.sh
 #    user root
 #    oneshot
 
-service crashdata-sh /vendor/bin/init.qcom.crashdata.sh
-    class late_start
-    user root
-    oneshot
-
 service qcom-post-boot /vendor/bin/init.qcom.post_boot.sh
     class late_start
     user root
