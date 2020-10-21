@@ -56,6 +56,7 @@ fi
 function blob_fixup() {
     case "${1}" in
         vendor/lib/hw/camera.msm8937.so)
+            sed -i "s/service.bootanim.exit/service.bootanim.zzzz/g" "${2}"
             "${PATCHELF}" --add-needed "libcamera_shim.so" "${2}"
             ;;
         vendor/lib/hw/audio.primary.msm8937.so)
