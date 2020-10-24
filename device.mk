@@ -332,6 +332,11 @@ PRODUCT_PACKAGES += \
     android.hardware.thermal@1.0-impl \
     android.hardware.thermal@1.0-service
 
+# TimeKeep
+PRODUCT_PACKAGES += \
+    timekeep \
+    TimeKeep
+
 # Treble
 PRODUCT_USE_VNDK_OVERRIDE := false
 PRODUCT_VENDOR_MOVE_ENABLED := false

@@ -864,8 +864,6 @@ vendor/lib/libthermalioctl.so
 vendor/lib/hw/thermal.msm8937.so
 
 # Time
--vendor/app/TimeService/TimeService.apk
-vendor/bin/time_daemon
 vendor/lib/libtime_genoff.so
 
 # Touch-improve
