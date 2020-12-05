@@ -639,11 +639,6 @@ vendor/lib/libqti-iopd-client.so
 vendor/lib/vendor.qti.hardware.iop@1.0.so
 vendor/lib/vendor.qti.hardware.iop@2.0.so
 
-# Keystore
-vendor/lib/hw/keystore.msm8937.so
-vendor/lib/libkeystore-engine-wifi-hidl.so
-vendor/lib/libkeystore-wifi-hidl.so
-
 # Latency
 framework/vendor.qti.hardware.data.latency-V1.0-java.jar
 lib/vendor.qti.hardware.data.latency@1.0.so
