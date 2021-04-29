@@ -553,9 +553,6 @@ vendor/lib/vendor.qti.gnss@2.0.so
 vendor/lib/vendor.qti.gnss@2.1.so
 vendor/lib/vendor.samsung.hardware.gnss@1.0.so
 
-# Gatekeeper
-vendor/lib/hw/gatekeeper.msm8937.so
-
 # Graphics (Adreno) - from ASUS_X00RD - msm8937_64-user 10 QKQ1.191002.002 17.07.2003.405-20200330 release-keys
 vendor/lib/egl/eglSubDriverAndroid.so|c90099d92d885e3533008cb422d872f6ebebc6d4
 vendor/lib/egl/libEGL_adreno.so|a3bb3c748cc180521a3b0ea173e714a55c01b118
