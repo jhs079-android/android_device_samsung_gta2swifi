@@ -6,6 +6,14 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+function blob_fixup() {
+    case "${1}" in
+        vendor/lib/hw/audio.primary.msm8937.so)
+            "${PATCHELF}" --remove-needed libaudio_soundtrigger.so "${2}"
+            ;;
+    esac
+}
+
 set -e
 
 DEVICE=gta2swifi
