@@ -123,7 +123,8 @@ BOARD_ROOT_EXTRA_SYMLINKS := \
     /mnt/vendor/persist:/persist \
     /mnt/vendor/efs:/efs
 
-TARGET_COPY_OUT_VENDOR := vendor
+#TARGET_COPY_OUT_VENDOR := system/vendor
+#BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
 
 # FM
 BOARD_HAS_QCA_FM_SOC := "cherokee"
