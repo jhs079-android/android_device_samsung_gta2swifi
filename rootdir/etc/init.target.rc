@@ -34,7 +34,6 @@ on early-init
     exec u:r:vendor_modprobe:s0 -- /vendor/bin/modprobe -a -d /vendor/lib/modules audio_apr audio_adsp_loader audio_q6_notifier audio_q6 audio_usf audio_native audio_pinctrl_wcd audio_swr audio_platform audio_swr_ctrl audio_hdmi audio_wcd9xxx audio_wcd_core audio_wsa881x_analog audio_wsa881x audio_mbhc audio_stub audio_digital_cdc audio_analog_cdc audio_wcd_cpe audio_cpe_lsm audio_wcd9335 audio_machine_sdm450 audio_machine_ext_sdm450
     mkdir /system 0777 root root
     symlink /data/tombstones /tombstones
-    mkdir /efs 0771 system radio
 
 on fs
     wait /dev/block/platform/soc/${ro.boot.bootdevice}
@@ -59,8 +58,6 @@ on fs
 
     wait /dev/block/bootdevice/by-name/efs
     mount ext4 /dev/block/bootdevice/by-name/efs /efs nosuid nodev noatime noauto_da_alloc,discard,journal_checksum,data=ordered,errors=panic
-    chown system radio /efs
-    chmod 0771 /efs
     restorecon -R /efs
 
     wait /dev/block/bootdevice/by-name/dsp
