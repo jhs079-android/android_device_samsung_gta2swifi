@@ -66,6 +66,9 @@ vendor/etc/Headset_cal.acdb
 vendor/etc/Speaker_cal.acdb
 vendor/etc/workspaceFile.qwsp
 
+# Audio-Firmware
+vendor/etc/Tfa9890.cnt
+
 # Audio-Hardware
 vendor/lib/hw/audio.primary.msm8937.so
 vendor/lib/libtinycompress_vendor.so
