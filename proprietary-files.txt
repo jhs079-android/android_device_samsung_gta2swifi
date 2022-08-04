@@ -928,10 +928,8 @@ vendor/bin/StoreKeybox
 vendor/bin/tbaseLoader
 vendor/bin/test_diag
 vendor/bin/wvkprov
-vendor/etc/playback_record_audio_policy_configuration.xml
 vendor/etc/public.libraries.txt.backup
 vendor/etc/SoundBoosterParam.txt
-vendor/etc/tms_audio_policy_configuration.xml
 vendor/lib/libdiagjni.so
 vendor/lib/libfastcrc.so
 vendor/lib/libfloatingfeature.so
