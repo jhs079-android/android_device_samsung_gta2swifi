@@ -105,7 +105,13 @@ PRODUCT_PACKAGES += \
 
 # Camera
 PRODUCT_PACKAGES += \
+    camera.msm8937 \
+    camera.device@1.0-impl \
+    camera.device@3.2-impl \
+    camera.device@3.3-impl \
     camera.device@3.4-impl \
+    camera.device@3.5-impl \
+    libcamera_shim \
     Snap
 
 $(foreach f,$(wildcard $(LOCAL_PATH)/camera/*.xml),\

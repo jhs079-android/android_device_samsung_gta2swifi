@@ -604,6 +604,15 @@
         </interface>
     </hal>
     <hal format="hidl">
+        <name>vendor.samsung.hardware.camera.provider</name>
+        <transport>hwbinder</transport>
+        <version>2.4</version>
+        <interface>
+            <name>ISecCameraProvider</name>
+            <instance>legacy/0</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
         <name>vendor.samsung.hardware.exthealth</name>
         <transport>hwbinder</transport>
         <version>1.0</version>

@@ -11,6 +11,9 @@ function blob_fixup() {
         vendor/lib/hw/audio.primary.msm8937.so)
             "${PATCHELF}" --remove-needed libaudio_soundtrigger.so "${2}"
             ;;
+        lib/hw/camera.msm8937.so)
+            "${PATCHELF}" --add-needed "libcamera_shim.so" "${2}"
+            ;;
     esac
 }
 

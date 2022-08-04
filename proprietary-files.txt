@@ -117,12 +117,15 @@ vendor/lib/vendor.qti.hardware.data.dynamicdds@1.0.so
 vendor/lib/vendor.qti.hardware.data.qmi@1.0.so
 
 # Camera
+## Pinned files are patchelf'd to add shim lib
 lib/libmmjpeg_interface.so
 lib/libqomx_core.so
 lib/libsecimaging.camera.samsung.so
 lib/libsecjpeginterface.camera.samsung.so
 lib/libsecjpegquram.so
 lib/libsemcamera_jni.camera.samsung.so
+lib/hw/camera.msm8937.so:vendor/lib/hw/camera.msm8937.so|4d5309ac55ec00d3c0bf5df958a40c1ad232ac4c
+vendor/lib/hw/vendor.samsung.hardware.camera.provider@2.4-impl.so
 vendor/lib/camera.device@1.0-impl.so
 vendor/lib/camera.device@3.2-impl.so
 vendor/lib/camera.device@3.3-impl.so
@@ -135,6 +138,7 @@ vendor/lib/libgui_vendor.so
 vendor/lib/libjpegdhw.so
 vendor/lib/libjpegdmahw.so
 vendor/lib/libjpegehw.so
+lib/libmm-qcamera.so:vendor/lib/libmm-qcamera.so
 vendor/lib/libmmjpeg.so
 vendor/lib/libmmqjpegdma.so
 vendor/lib/libmmqjpeg_codec.so
@@ -145,11 +149,24 @@ vendor/lib/libsecpkcs11_engine.so
 vendor/lib/libswvdec.so
 vendor/lib/libvideoutils.so
 vendor/lib/vendor.qti.hardware.camera.device@1.0.so
+vendor/lib/vendor.samsung.camera.device@1.0-impl.so
+vendor/lib/vendor.samsung.camera.device@3.2-impl.so
+vendor/lib/vendor.samsung.camera.device@3.3-impl.so
+vendor/lib/vendor.samsung.camera.device@3.4-impl.so
+vendor/lib/vendor.samsung.hardware.camera.device@1.0.so
+vendor/lib/vendor.samsung.hardware.camera.device@3.2.so
+vendor/lib/vendor.samsung.hardware.camera.device@3.3.so
+vendor/lib/vendor.samsung.hardware.camera.device@3.4.so
+vendor/lib/vendor.samsung.hardware.camera.provider@2.4.so
+vendor/lib/vendor.samsung.hardware.camera.provider@2.5.so
 
 # Camera actuators
 vendor/lib/libactuator_dw9807.so
 
 # Camera bin
+## Pinned files are from j4primelte oreo
+vendor/bin/hw/vendor.samsung.hardware.camera.provider@2.4-service|7ac7796b0844b3a8d941a7a0b23f26d76ee1fa00
+vendor/etc/init/vendor.samsung.hardware.camera.provider@2.4-service.rc|7c314aa0ca9284588a42eb7d922a9f85b1740d98
 vendor/bin/mm-qcamera-daemon
 
 # Camera chromatix
@@ -301,6 +318,17 @@ vendor/lib/libchromatix_sr259_vt.so
 vendor/lib/libchromatix_sr259_zsl_preview_lc898122.so
 vendor/lib/libchromatix_sr259_zsl_video_lc898122.so
 
+# Camera-firmware
+etc/firmware/cpp_firmware_v1_1_1.fw
+etc/firmware/cpp_firmware_v1_1_6.fw
+etc/firmware/cpp_firmware_v1_2_0.fw
+etc/firmware/cpp_firmware_v1_4_0.fw
+etc/firmware/cpp_firmware_v1_5_0.fw
+etc/firmware/cpp_firmware_v1_5_2.fw
+etc/firmware/cpp_firmware_v1_6_0.fw
+etc/firmware/cpp_firmware_v1_8_0.fw
+etc/firmware/cpp_firmware_v1_10_0.fw
+
 # Camera-ois
 vendor/lib/libois_lc898122.so
 
@@ -337,6 +365,7 @@ vendor/lib/libmmcamera_faceproc.so
 vendor/lib/libmmcamera_hdr_gb_lib.so
 vendor/lib/libmmcamera_imglib_faceproc_adspstub.so
 vendor/lib/libmmcamera_imglib.so
+lib/libmmcamera_interface.so:vendor/lib/libmmcamera_interface.so
 vendor/lib/libmmcamera_isp_abf40.so
 vendor/lib/libmmcamera_isp_bcc40.so
 vendor/lib/libmmcamera_isp_be_stats44.so
@@ -818,7 +847,6 @@ vendor/etc/init/vendor.samsung.hardware.miscpower@1.0-service.rc
 vendor/etc/init/vendor.samsung.security.sem@1.0-service.rc
 vendor/etc/init/vendor.samsung.security.skpm@1.0-service.rc
 vendor/etc/init/vendor.samsung.security.wvkprov_server@1.0-service.rc
-vendor/lib/hw/vendor.samsung.hardware.camera.provider@2.4-impl.so
 vendor/lib/libhumantracking_util.camera.samsung.so
 vendor/lib/libOpenCv.camera.samsung.so
 vendor/lib/libremotedesktop_client.knox.samsung.so
@@ -829,18 +857,8 @@ vendor/lib/lib_soundaliveresampler.so
 vendor/lib/lib_SoundAlive_3DPosition_ver202.so
 vendor/lib/lib_SoundAlive_SRC384_ver320.so
 vendor/lib/soundfx/libsamsungSoundbooster_plus.so
-vendor/lib/vendor.samsung.camera.device@1.0-impl.so
-vendor/lib/vendor.samsung.camera.device@3.2-impl.so
-vendor/lib/vendor.samsung.camera.device@3.3-impl.so
-vendor/lib/vendor.samsung.camera.device@3.4-impl.so
 vendor/lib/vendor.samsung.external.secure_storage@2.0.so
 vendor/lib/vendor.samsung.frameworks.ucm.wifi@1.0.so
-vendor/lib/vendor.samsung.hardware.camera.device@1.0.so
-vendor/lib/vendor.samsung.hardware.camera.device@3.2.so
-vendor/lib/vendor.samsung.hardware.camera.device@3.3.so
-vendor/lib/vendor.samsung.hardware.camera.device@3.4.so
-vendor/lib/vendor.samsung.hardware.camera.provider@2.4.so
-vendor/lib/vendor.samsung.hardware.camera.provider@2.5.so
 vendor/lib/vendor.samsung.hardware.exthealth@1.0.so
 vendor/lib/vendor.samsung.hardware.miscpower@1.0.so
 vendor/lib/vendor.samsung.hardware.radio.secbridge@1.0_vendor.so
