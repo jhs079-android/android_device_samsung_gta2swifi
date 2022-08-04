@@ -108,21 +108,8 @@ PRODUCT_PACKAGES += \
     camera.device@3.4-impl \
     Snap
 
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/camera/imx219_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/imx219_chromatix.xml \
-    $(LOCAL_PATH)/camera/imx219_elite_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/imx219_elite_chromatix.xml \
-    $(LOCAL_PATH)/camera/imx258_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/imx258_chromatix.xml \
-    $(LOCAL_PATH)/camera/s5k4h5yc_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/s5k4h5yc_chromatix.xml \
-    $(LOCAL_PATH)/camera/s5k4h5yc_dw9807_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/s5k4h5yc_dw9807_chromatix.xml \
-    $(LOCAL_PATH)/camera/s5k4h5yc_dw9807_chromatix_gta2s.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/s5k4h5yc_dw9807_chromatix_gta2s.xml \
-    $(LOCAL_PATH)/camera/s5k5e3yx_f2_2_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/s5k5e3yx_f2_2_chromatix.xml \
-    $(LOCAL_PATH)/camera/s5k5e3yx_f2_2_chromatix_j3y17.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/s5k5e3yx_f2_2_chromatix_j3y17.xml \
-    $(LOCAL_PATH)/camera/sr259_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/sr259_chromatix.xml \
-    $(LOCAL_PATH)/camera/Y13QL_s5k3l2xx_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/Y13QL_s5k3l2xx_chromatix.xml
-
-# gta2swifi camera
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/camera/msm8917_camera_gta2s.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/msm8917_camera_gta2s.xml
+$(foreach f,$(wildcard $(LOCAL_PATH)/camera/*.xml),\
+        $(eval PRODUCT_COPY_FILES += $(f):$(TARGET_COPY_OUT_VENDOR)/etc/camera/$(notdir $f)))
 
 # Configstore
 PRODUCT_PACKAGES += \
