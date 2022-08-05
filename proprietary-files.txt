@@ -125,11 +125,6 @@ lib/libsecjpeginterface.camera.samsung.so
 lib/libsecjpegquram.so
 lib/libsemcamera_jni.camera.samsung.so
 lib/hw/camera.msm8937.so:vendor/lib/hw/camera.msm8937.so|4d5309ac55ec00d3c0bf5df958a40c1ad232ac4c
-vendor/lib/hw/vendor.samsung.hardware.camera.provider@2.4-impl.so
-vendor/lib/camera.device@1.0-impl.so
-vendor/lib/camera.device@3.2-impl.so
-vendor/lib/camera.device@3.3-impl.so
-vendor/lib/camera.device@3.4-impl.so
 vendor/lib/libbase64.so
 vendor/lib/libcapiv2svacnn.so
 vendor/lib/libcapiv2vop.so
@@ -149,24 +144,11 @@ vendor/lib/libsecpkcs11_engine.so
 vendor/lib/libswvdec.so
 vendor/lib/libvideoutils.so
 vendor/lib/vendor.qti.hardware.camera.device@1.0.so
-vendor/lib/vendor.samsung.camera.device@1.0-impl.so
-vendor/lib/vendor.samsung.camera.device@3.2-impl.so
-vendor/lib/vendor.samsung.camera.device@3.3-impl.so
-vendor/lib/vendor.samsung.camera.device@3.4-impl.so
-vendor/lib/vendor.samsung.hardware.camera.device@1.0.so
-vendor/lib/vendor.samsung.hardware.camera.device@3.2.so
-vendor/lib/vendor.samsung.hardware.camera.device@3.3.so
-vendor/lib/vendor.samsung.hardware.camera.device@3.4.so
-vendor/lib/vendor.samsung.hardware.camera.provider@2.4.so
-vendor/lib/vendor.samsung.hardware.camera.provider@2.5.so
 
 # Camera actuators
 vendor/lib/libactuator_dw9807.so
 
 # Camera bin
-## Pinned files are from j4primelte oreo
-vendor/bin/hw/vendor.samsung.hardware.camera.provider@2.4-service|7ac7796b0844b3a8d941a7a0b23f26d76ee1fa00
-vendor/etc/init/vendor.samsung.hardware.camera.provider@2.4-service.rc|7c314aa0ca9284588a42eb7d922a9f85b1740d98
 vendor/bin/mm-qcamera-daemon
 
 # Camera chromatix
