@@ -439,23 +439,6 @@ vendor/lib/libwvhidl.so
 vendor/lib/mediadrm/libdrmclearkeyplugin.so
 vendor/lib/mediadrm/libwvdrmengine.so
 
-# Display-Hardware
-lib/libsdm-disp-apis.so
-vendor/lib/hw/gralloc.msm8937.so
-vendor/lib/libdrm.so
-vendor/lib/libdrmutils.so
-vendor/lib/libgpu_tonemapper.so
-vendor/lib/libgrallocutils.so
-vendor/lib/libqdMetaData.so
-vendor/lib/libqdutils.so
-vendor/lib/libqservice.so
-vendor/lib/libsdmcore.so
-vendor/lib/libsdmextension.so
-vendor/lib/libsdmutils.so
-vendor/lib/vendor.display.config@1.0.so
-vendor/lib/vendor.display.config@1.1.so
-vendor/lib/vendor.display.config@1.2.so
-
 # ESE-Powermanager
 vendor/lib/vendor.qti.esepowermanager@1.0.so
 
@@ -573,7 +556,7 @@ vendor/lib/libgps.utils.so
 # Gatekeeper
 vendor/lib/hw/gatekeeper.msm8937.so
 
-# Graphics
+# Graphics (Adreno)
 vendor/lib/egl/eglSubDriverAndroid.so
 vendor/lib/egl/libEGL_adreno.so
 vendor/lib/egl/libGLESv1_CM_adreno.so
@@ -587,6 +570,7 @@ vendor/lib/libC2D2.so
 vendor/lib/libc2d30-a3xx.so
 vendor/lib/libc2d30_bltlib.so
 vendor/lib/libCB.so
+vendor/lib/libgpu_tonemapper.so
 vendor/lib/libgsl.so
 vendor/lib/libhdr_tm.so
 vendor/lib/libllvm-glnext.so
@@ -595,10 +579,17 @@ vendor/lib/libOpenCL.so
 vendor/lib/libRSDriver_adreno.so
 vendor/lib/librs_adreno.so
 vendor/lib/librs_adreno_sha1.so
+
+# Graphics (DRM)
+vendor/lib/libdrm.so
+vendor/lib/libdrmutils.so
+
+# Graphics (SDM)
 vendor/lib/libsdm-color.so
 vendor/lib/libsdm-diag.so
 -vendor/lib/libsdm-disp-vndapis.so
 vendor/lib/libtinyxml2_1.so
+vendor/lib/libsdmextension.so
 
 # IOP
 vendor/lib/hw/vendor.qti.hardware.iop@2.0-impl.so
