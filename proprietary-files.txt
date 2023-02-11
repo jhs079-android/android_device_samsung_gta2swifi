@@ -606,18 +606,6 @@ vendor/lib/libqti-iopd-client.so
 vendor/lib/vendor.qti.hardware.iop@1.0.so
 vendor/lib/vendor.qti.hardware.iop@2.0.so
 
-# Keymaster
-vendor/app/mcRegistry/07010000000000000000000000000000.tlbin
-vendor/bin/hw/android.hardware.keymaster@3.0-service
-vendor/bin/mcDriverDaemon
-vendor/etc/init/android.hardware.keymaster@3.0-service.rc
-vendor/lib/hw/android.hardware.keymaster@3.0-impl.so
-vendor/lib/hw/keystore.msm8937.so
-vendor/lib/libkeymasterdeviceutils.so
-vendor/lib/libkeymasterprovision.so
-vendor/lib/libkeymasterutils.so
-vendor/lib/libqtikeymaster4.so
-
 # Keystore
 vendor/lib/hw/keystore.msm8937.so
 vendor/lib/libkeystore-engine-wifi-hidl.so
@@ -701,6 +689,10 @@ vendor/lib/libOmxSwVencMpeg4.so
 vendor/lib/libOmxVdec.so
 vendor/lib/libOmxVenc.so
 vendor/lib/libstagefrighthw.so
+
+# Mobicore
+vendor/app/mcRegistry/07010000000000000000000000000000.tlbin
+vendor/bin/mcDriverDaemon
 
 # Perf
 vendor/bin/hw/vendor.qti.hardware.perf@1.0-service
