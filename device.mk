@@ -105,15 +105,13 @@ PRODUCT_PACKAGES += \
 
 # Camera
 PRODUCT_PACKAGES += \
-    android.hardware.camera.provider@2.4-impl \
+    Snap \
+    android.frameworks.displayservice@1.0 \
+    android.hardware.camera.provider@2.4-impl:32 \
     android.hardware.camera.provider@2.4-service \
-    camera.device@3.4-impl \
-    camera.msm8937 \
     libcamera_shim \
-    Snap
-
-$(foreach f,$(wildcard $(LOCAL_PATH)/camera/*.xml),\
-        $(eval PRODUCT_COPY_FILES += $(f):$(TARGET_COPY_OUT_VENDOR)/etc/camera/$(notdir $f)))
+    libgui_vendor \
+    vendor.qti.hardware.camera.device@1.0
 
 # Configstore
 PRODUCT_PACKAGES += \
@@ -219,17 +217,20 @@ PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_video.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_video.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_video_le.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_video_le.xml
 
-# OMX
+# Media
 PRODUCT_PACKAGES += \
-    libmm-omxcore \
-    libc2dcolorconvert \
     libOmxAacEnc \
     libOmxAmrEnc \
     libOmxCore \
     libOmxEvrcEnc \
+    libOmxG711Enc \
     libOmxQcelp13Enc \
+    libOmxSwVdec \
+    libOmxSwVencMpeg4 \
     libOmxVdec \
     libOmxVenc \
+    libc2dcolorconvert \
+    libmm-omxcore \
     libstagefrighthw
 
 # Permissions
@@ -311,6 +312,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/seccomp/mediacodec.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediacodec.policy \
     $(LOCAL_PATH)/seccomp/mediaextractor.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediaextractor.policy
+
+# Sensors
+PRODUCT_PACKAGES += \
+    android.hardware.sensors@1.0-impl \
+    android.hardware.sensors@1.0-service
 
 # Soong
 PRODUCT_SOONG_NAMESPACES += \

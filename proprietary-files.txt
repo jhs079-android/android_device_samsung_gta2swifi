@@ -1,21 +1,33 @@
 # Imported from msm8917-common by samsung-msm8937-devs
 # Proprietary files - from Samsung package version T380XAR4CUA2, unless pinned
 
-# ADSP
-vendor/bin/adsprpcd
-vendor/lib/libadsp_default_listener.so
-vendor/lib/libadsprpc.so
-vendor/lib/libfastcvadsp_stub.so
-vendor/lib/libfastcvopt.so
-vendor/lib/libmdsprpc.so
-vendor/lib/libsdsprpc.so
+# ACDB
+vendor/etc/Bluetooth_cal.acdb
+vendor/etc/General_cal.acdb
+vendor/etc/Global_cal.acdb
+vendor/etc/Handset_cal.acdb
+vendor/etc/Hdmi_cal.acdb
+vendor/etc/Headset_cal.acdb
+vendor/etc/Speaker_cal.acdb
+vendor/etc/workspaceFile.qwsp
+vendor/lib/libacdb-fts.so
+vendor/lib/libacdbloader.so
+vendor/lib/libacdbrtac.so
 
-# ADSP Modules
+# ADSP / CDSP / MDSP / SDSP
+vendor/bin/adsprpcd
 vendor/lib/rfsa/adsp/libadsp_fd_skel.so
 vendor/lib/rfsa/adsp/libapps_mem_heap.so
 vendor/lib/rfsa/adsp/libdspCV_skel.so
 vendor/lib/rfsa/adsp/libfastcvadsp.so
 vendor/lib/rfsa/adsp/libfastcvadsp_skel.so
+vendor/lib/libadsp_default_listener.so
+vendor/lib/libadsprpc.so
+vendor/lib/libcdsprpc.so
+vendor/lib/libfastcvadsp_stub.so
+vendor/lib/libfastcvopt.so
+vendor/lib/libmdsprpc.so
+vendor/lib/libsdsprpc.so
 
 # ANT
 lib/com.qualcomm.qti.ant@1.0.so
@@ -37,44 +49,34 @@ lib/librecordalive.so:vendor/lib/librecordalive.so
 lib/libsamsungVoipResampler.so:vendor/lib/libsamsungVoipResampler.so
 lib/libtfa98xx.so:vendor/lib/libtfa98xx.so
 vendor/bin/audioflacapp
+vendor/lib/hw/audio.primary.msm8937.so
 vendor/lib/soundfx/libasphere.so
 vendor/lib/soundfx/libaudioeffectoffload.so
 vendor/lib/soundfx/libaudiopreprocessing.so
 vendor/lib/soundfx/libaudiosaplus_sec.so
+vendor/lib/soundfx/libgearvr.so
+vendor/lib/soundfx/libmysound.so
+vendor/lib/soundfx/libmyspace.so
+vendor/lib/soundfx/libplaybackrecorder.so
 vendor/lib/soundfx/libqcbassboost.so
+vendor/lib/soundfx/libqcompostprocbundle.so
+vendor/lib/soundfx/libqcomvisualizer.so
+vendor/lib/soundfx/libqcomvoiceprocessing.so
 vendor/lib/soundfx/libqcreverb.so
 vendor/lib/soundfx/libqcvirt.so
-vendor/lib/libacdb-fts.so
-vendor/lib/libacdbloader.so
-vendor/lib/libacdbrtac.so
+vendor/lib/soundfx/libsamsungSoundbooster_plus.so
 vendor/lib/libadiertac.so
 vendor/lib/libadm.so
 vendor/lib/libaudcal.so
 vendor/lib/libaudioalsa.so
-vendor/lib/libaudioparsers.so
+-vendor/lib/libaudioparsers.so
 vendor/lib/libdrc.so
 vendor/lib/libqtigef.so
 vendor/lib/libsurround_3mic_proc.so
-
-# ACDB
-vendor/etc/Bluetooth_cal.acdb
-vendor/etc/General_cal.acdb
-vendor/etc/Global_cal.acdb
-vendor/etc/Handset_cal.acdb
-vendor/etc/Hdmi_cal.acdb
-vendor/etc/Headset_cal.acdb
-vendor/etc/Speaker_cal.acdb
-vendor/etc/workspaceFile.qwsp
-
-# Audio-Firmware
-vendor/etc/Tfa9890.cnt
-
-# Audio-Hardware
-vendor/lib/hw/audio.primary.msm8937.so
-vendor/lib/soundfx/libqcompostprocbundle.so
-vendor/lib/soundfx/libqcomvisualizer.so
-vendor/lib/soundfx/libqcomvoiceprocessing.so
 vendor/lib/libtinycompress_vendor.so
+
+# Audio (Firmware)
+vendor/etc/Tfa9890.cnt
 
 # Bluetooth
 vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti
@@ -85,9 +87,6 @@ vendor/lib/vendor.samsung.hardware.bluetooth@1.0.so
 
 # Bluetooth (aptX)
 lib/libaptX_encoder.so
-
-# CDSP
-vendor/lib/libcdsprpc.so
 
 # CNE
 framework/cneapiclient.jar
@@ -125,11 +124,13 @@ lib/libsecimaging.camera.samsung.so
 lib/libsecjpeginterface.camera.samsung.so
 lib/libsecjpegquram.so
 lib/libsemcamera_jni.camera.samsung.so
+vendor/bin/mm-qcamera-daemon
+vendor/lib/libOpenCv.camera.samsung.so
 vendor/lib/libbase64.so
 vendor/lib/libcapiv2svacnn.so
 vendor/lib/libcapiv2vop.so
 vendor/lib/libflash_pmic.so
-vendor/lib/libgui_vendor.so
+vendor/lib/libhumantracking_util.camera.samsung.so
 vendor/lib/libjpegdhw.so
 vendor/lib/libjpegdmahw.so
 vendor/lib/libjpegehw.so
@@ -140,17 +141,32 @@ vendor/lib/libqomx_jpegdec.so
 vendor/lib/libqomx_jpegenc.so
 vendor/lib/libqomx_jpegenc_pipe.so
 vendor/lib/libsecpkcs11_engine.so
+vendor/lib/libsmart_cropping.camera.samsung.so
+vendor/lib/libsomp.camera.samsung.so
 vendor/lib/libswvdec.so
 vendor/lib/libvideoutils.so
-vendor/lib/vendor.qti.hardware.camera.device@1.0.so
+vendor/lib/libxcv.camera.samsung.so
 
-# Camera actuators
+# Camera (Actuators)
 vendor/lib/libactuator_dw9807.so
 
-# Camera bin
-vendor/bin/mm-qcamera-daemon
+# Camera (Configs)
+vendor/etc/camera/D05QL_s5k5e3yx_module_info.xml
+vendor/etc/camera/P08QL_s5k4h5yc_module_info.xml
+vendor/etc/camera/Q08QL_s5k4h5yc_module_info.xml
+vendor/etc/camera/Y13QL_s5k3l2xx_chromatix.xml
+vendor/etc/camera/imx219_chromatix.xml
+vendor/etc/camera/imx219_elite_chromatix.xml
+vendor/etc/camera/imx258_chromatix.xml
+vendor/etc/camera/msm8917_camera_gta2s.xml
+vendor/etc/camera/s5k4h5yc_chromatix.xml
+vendor/etc/camera/s5k4h5yc_dw9807_chromatix.xml
+vendor/etc/camera/s5k4h5yc_dw9807_chromatix_gta2s.xml
+vendor/etc/camera/s5k5e3yx_f2_2_chromatix.xml
+vendor/etc/camera/s5k5e3yx_f2_2_chromatix_j3y17.xml
+vendor/etc/camera/sr259_chromatix.xml
 
-# Camera chromatix
+# Camera (Chromatix)
 vendor/lib/libchromatix_imx219_3a_4k_preview.so
 vendor/lib/libchromatix_imx219_3a_4k_video.so
 vendor/lib/libchromatix_imx219_3a_hfr_120.so
@@ -299,7 +315,7 @@ vendor/lib/libchromatix_sr259_vt_lc898122.so
 vendor/lib/libchromatix_sr259_zsl_preview_lc898122.so
 vendor/lib/libchromatix_sr259_zsl_video_lc898122.so
 
-# Camera-firmware
+# Camera (Firmware)
 etc/firmware/cpp_firmware_v1_10_0.fw
 etc/firmware/cpp_firmware_v1_1_1.fw
 etc/firmware/cpp_firmware_v1_1_6.fw
@@ -310,10 +326,10 @@ etc/firmware/cpp_firmware_v1_5_2.fw
 etc/firmware/cpp_firmware_v1_6_0.fw
 etc/firmware/cpp_firmware_v1_8_0.fw
 
-# Camera-ois
+# Camera (OIS)
 vendor/lib/libois_lc898122.so
 
-# Camera-sensors
+# Camera (Sensors)
 lib/libmmcamera_interface.so:vendor/lib/libmmcamera_interface.so
 vendor/lib/libmmcamera2_c2d_module.so
 vendor/lib/libmmcamera2_cpp_module.so
@@ -432,12 +448,17 @@ vendor/lib/libsecureui_svcsock.so
 vendor/lib/libssd.so
 vendor/lib/libtzdrmgenprov.so
 
-# DRM-Widevine
+# DRM (Widevine)
 vendor/bin/hw/android.hardware.drm@1.1-service.widevine
 vendor/etc/init/android.hardware.drm@1.1-service.widevine.rc
 vendor/lib/mediadrm/libdrmclearkeyplugin.so
 vendor/lib/mediadrm/libwvdrmengine.so
 vendor/lib/libwvhidl.so
+
+# Device Health
+vendor/bin/hw/android.hardware.health@2.0-service.samsung
+vendor/etc/init/android.hardware.health@2.0-service.samsung.rc
+vendor/lib/vendor.samsung.hardware.exthealth@1.0.so
 
 # ESE-Powermanager
 vendor/lib/vendor.qti.esepowermanager@1.0.so
@@ -522,8 +543,12 @@ vendor/lib/libdataitems.so
 vendor/lib/libdrplugin_client.so
 vendor/lib/libevent_observer.so
 vendor/lib/libflp.so
+vendor/lib/libgarden.so
 vendor/lib/libgdtap.so
 vendor/lib/libgeofence.so
+vendor/lib/libgnss.so
+vendor/lib/libgnsspps.so
+vendor/lib/libgps.utils.so
 vendor/lib/libizat_client_api.so
 vendor/lib/libizat_core.so
 vendor/lib/liblbs_core.so
@@ -547,12 +572,6 @@ vendor/lib/vendor.qti.gnss@2.0.so
 vendor/lib/vendor.qti.gnss@2.1.so
 vendor/lib/vendor.samsung.hardware.gnss@1.0.so
 
-# GPS-Hardware
-vendor/lib/libgarden.so
-vendor/lib/libgnss.so
-vendor/lib/libgnsspps.so
-vendor/lib/libgps.utils.so
-
 # Gatekeeper
 vendor/lib/hw/gatekeeper.msm8937.so
 
@@ -574,15 +593,13 @@ vendor/lib/libc2d30-a3xx.so
 vendor/lib/libc2d30_bltlib.so
 vendor/lib/libgpu_tonemapper.so
 vendor/lib/libgsl.so
-vendor/lib/libhdr_tm.so
 vendor/lib/libllvm-glnext.so
 vendor/lib/libllvm-qcom.so
 vendor/lib/librs_adreno.so
 vendor/lib/librs_adreno_sha1.so
 
-# Graphics (DRM)
-vendor/lib/libdrm.so
-vendor/lib/libdrmutils.so
+# Graphics (HDR)
+vendor/lib/libhdr_tm.so
 
 # Graphics (SDM)
 vendor/lib/libsdm-color.so
@@ -631,24 +648,7 @@ lib/libmmparser_lite.so
 lib/libmmrtpdecoder.so
 lib/libmmrtpencoder.so
 lib/vendor.qti.hardware.vpp@1.1.so
-vendor/lib/libAlacSwDec.so
-vendor/lib/libApeSwDec.so
-vendor/lib/libFlacSwDec.so
 vendor/lib/libI420colorconvert.so
-vendor/lib/libMpeg4SwEncoder.so
-vendor/lib/libOmxAacDec.so
-vendor/lib/libOmxAlacDec.so
-vendor/lib/libOmxAlacDecSw.so
-vendor/lib/libOmxAmrDec.so
-vendor/lib/libOmxAmrwbplusDec.so
-vendor/lib/libOmxApeDec.so
-vendor/lib/libOmxApeDecSw.so
-vendor/lib/libOmxDsdDec.so
-vendor/lib/libOmxEvrcDec.so
-vendor/lib/libOmxG711Dec.so
-vendor/lib/libOmxQcelp13Dec.so
-vendor/lib/libOmxVpp.so
-vendor/lib/libOmxWmaDec.so
 vendor/lib/libdsd2pcm.so
 vendor/lib/libmm-color-convertor.so
 vendor/lib/libmmosal_proprietary.so
@@ -666,24 +666,28 @@ vendor/lib/libvqzip.so
 vendor/lib/vendor.qti.hardware.vpp@1.1.so
 vendor/lib/vendor.qti.hardware.vpp@1.2.so
 
-# Media-Hardware
-vendor/lib/libOmxAacEnc.so
-vendor/lib/libOmxAmrEnc.so
-vendor/lib/libOmxCore.so
-vendor/lib/libOmxEvrcEnc.so
-vendor/lib/libOmxG711Enc.so
-vendor/lib/libOmxQcelp13Enc.so
-vendor/lib/libOmxSwVdec.so
-vendor/lib/libOmxSwVencMpeg4.so
-vendor/lib/libOmxVdec.so
-vendor/lib/libOmxVenc.so
-vendor/lib/libc2dcolorconvert.so
-vendor/lib/libmm-omxcore.so
-vendor/lib/libstagefrighthw.so
-
 # Mobicore
 vendor/app/mcRegistry/07010000000000000000000000000000.tlbin
 vendor/bin/mcDriverDaemon
+
+# OMX
+vendor/lib/libAlacSwDec.so
+vendor/lib/libApeSwDec.so
+vendor/lib/libFlacSwDec.so
+vendor/lib/libMpeg4SwEncoder.so
+vendor/lib/libOmxAacDec.so
+vendor/lib/libOmxAlacDec.so
+vendor/lib/libOmxAlacDecSw.so
+vendor/lib/libOmxAmrDec.so
+vendor/lib/libOmxAmrwbplusDec.so
+vendor/lib/libOmxApeDec.so
+vendor/lib/libOmxApeDecSw.so
+vendor/lib/libOmxDsdDec.so
+vendor/lib/libOmxEvrcDec.so
+vendor/lib/libOmxG711Dec.so
+vendor/lib/libOmxQcelp13Dec.so
+vendor/lib/libOmxVpp.so
+vendor/lib/libOmxWmaDec.so
 
 # Perf
 vendor/bin/hw/vendor.qti.hardware.perf@1.0-service
@@ -719,6 +723,11 @@ vendor/lib/vendor.display.color@1.0.so
 vendor/lib/vendor.display.color@1.1.so
 vendor/lib/vendor.display.color@1.2.so
 vendor/lib/vendor.display.postproc@1.0.so
+
+# Power
+vendor/bin/hw/vendor.samsung.hardware.miscpower@1.0-service
+vendor/etc/init/vendor.samsung.hardware.miscpower@1.0-service.rc
+vendor/lib/vendor.samsung.hardware.miscpower@1.0.so
 
 # QMI
 vendor/bin/irsc_util
@@ -779,7 +788,7 @@ vendor/lib/vendor.qti.hardware.radio.uim@1.1.so
 vendor/lib/vendor.qti.hardware.radio.uim_remote_client@1.0.so
 vendor/lib/vendor.qti.hardware.radio.uim_remote_server@1.0.so
 
-# Radio-IMS
+# Radio (IMS)
 lib/libdiag_system.so
 vendor/lib/com.qualcomm.qti.imscmservice@1.0.so
 vendor/lib/com.qualcomm.qti.imscmservice@2.0.so
@@ -801,50 +810,28 @@ vendor/lib/libSubSystemShutdown.so
 vendor/lib/libsubsystem_control.so
 
 # Samsung
-vendor/bin/hw/android.hardware.health@2.0-service.samsung
-vendor/bin/hw/vendor.samsung.hardware.miscpower@1.0-service
 vendor/bin/vendor.samsung.security.sem@1.0-service
 vendor/bin/vendor.samsung.security.skpm@1.0-service
 vendor/bin/vendor.samsung.security.wvkprov_server@1.0-service
-vendor/etc/init/android.hardware.health@2.0-service.samsung.rc
-vendor/etc/init/vendor.samsung.hardware.miscpower@1.0-service.rc
 vendor/etc/init/vendor.samsung.security.sem@1.0-service.rc
 vendor/etc/init/vendor.samsung.security.skpm@1.0-service.rc
 vendor/etc/init/vendor.samsung.security.wvkprov_server@1.0-service.rc
-vendor/lib/soundfx/libsamsungSoundbooster_plus.so
-vendor/lib/libOpenCv.camera.samsung.so
 vendor/lib/lib_SoundAlive_3DPosition_ver202.so
 vendor/lib/lib_SoundAlive_SRC384_ver320.so
 vendor/lib/lib_soundaliveresampler.so
-vendor/lib/libhumantracking_util.camera.samsung.so
 vendor/lib/libremotedesktop_client.knox.samsung.so
-vendor/lib/libsmart_cropping.camera.samsung.so
-vendor/lib/libsomp.camera.samsung.so
-vendor/lib/libxcv.camera.samsung.so
 vendor/lib/vendor.samsung.external.secure_storage@2.0.so
-vendor/lib/vendor.samsung.frameworks.ucm.wifi@1.0.so
-vendor/lib/vendor.samsung.hardware.exthealth@1.0.so
-vendor/lib/vendor.samsung.hardware.miscpower@1.0.so
 vendor/lib/vendor.samsung.hardware.radio.secbridge@1.0_vendor.so
 vendor/lib/vendor.samsung.hardware.radio.sechook@1.0_vendor.so
 vendor/lib/vendor.samsung.hardware.radio@1.2_vendor.so
-vendor/lib/vendor.samsung.hardware.vibrator@1.0.so
-vendor/lib/vendor.samsung.hardware.wifi.hostapd@1.0.so
-vendor/lib/vendor.samsung.hardware.wifi.supplicant@1.0.so
-vendor/lib/vendor.samsung.hardware.wifi@1.0.so
 vendor/lib/vendor.samsung.security.sem@1.0.so
 vendor/lib/vendor.samsung.security.skpm@1.0.so
 vendor/lib/vendor.samsung.security.wvkprov_server@1.0.so
 
-# Sensor-calibrate
-vendor/lib/vendor.qti.hardware.sensorscalibrate@1.0.so
-
 # Sensors
-vendor/bin/hw/android.hardware.sensors@1.0-service
-vendor/etc/init/android.hardware.sensors@1.0-service.rc
-vendor/lib/hw/android.hardware.sensors@1.0-impl.so
 vendor/lib/libsensorlistener.so
 vendor/lib/libsensorndkbridge.so
+vendor/lib/vendor.qti.hardware.sensorscalibrate@1.0.so
 
 # Soter
 vendor/bin/SoterProvisioningTool
@@ -877,7 +864,7 @@ vendor/lib/libUBWC.so
 vendor/lib/libstreamparser.so
 
 # Vibrator
-vendor/lib/hw/vibrator.default.so
+vendor/lib/vendor.samsung.hardware.vibrator@1.0.so
 
 # Voice
 vendor/lib/vendor.qti.voiceprint@1.0.so
@@ -920,10 +907,6 @@ vendor/bin/test_diag
 vendor/bin/wvkprov
 vendor/etc/SoundBoosterParam.txt
 vendor/etc/public.libraries.txt.backup
-vendor/lib/soundfx/libgearvr.so
-vendor/lib/soundfx/libmysound.so
-vendor/lib/soundfx/libmyspace.so
-vendor/lib/soundfx/libplaybackrecorder.so
 vendor/lib/libHMT.so
 vendor/lib/libMcClient.so
 vendor/lib/libdiagjni.so

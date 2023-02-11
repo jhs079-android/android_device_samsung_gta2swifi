@@ -6,20 +6,6 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-function blob_fixup() {
-    case "${1}" in
-        lib/hw/camera.msm8937.so)
-            "${PATCHELF}" --add-needed "libcamera_shim.so" "${2}"
-            ;;
-        vendor/lib/hw/audio.primary.msm8937.so)
-            "${PATCHELF}" --remove-needed libaudio_soundtrigger.so "${2}"
-            ;;
-        vendor/lib/mediadrm/libwvdrmengine.so)
-            "${PATCHELF}" --replace-needed "libprotobuf-cpp-lite.so" "libprotobuf-cpp-lite-v29.so" "${2}"
-            ;;
-    esac
-}
-
 set -e
 
 DEVICE=gta2swifi
@@ -66,6 +52,20 @@ done
 if [ -z "${SRC}" ]; then
     SRC="adb"
 fi
+
+function blob_fixup() {
+    case "${1}" in
+        vendor/lib/hw/camera.msm8937.so)
+            "${PATCHELF}" --add-needed "libcamera_shim.so" "${2}"
+            ;;
+        vendor/lib/hw/audio.primary.msm8937.so)
+            "${PATCHELF}" --remove-needed libaudio_soundtrigger.so "${2}"
+            ;;
+        vendor/lib/mediadrm/libwvdrmengine.so)
+            "${PATCHELF}" --replace-needed "libprotobuf-cpp-lite.so" "libprotobuf-cpp-lite-v29.so" "${2}"
+            ;;
+    esac
+}
 
 # Initialize the helper
 setup_vendor "${DEVICE}" "${VENDOR}" "${ANDROID_ROOT}" false "${CLEAN_VENDOR}"
