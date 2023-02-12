@@ -701,10 +701,10 @@ vendor/lib/libqti-util.so
 vendor/lib/libqti-utils.so
 vendor/lib/vendor.qti.hardware.perf@1.0.so
 
-# Peripheral
-vendor/bin/pm-proxy
-vendor/bin/pm-service
-vendor/lib/libperipheral_client.so
+# Peripheral Manager - from j6primelte - j6primelteub-user 10 QP1A.190711.020 J610GUBU4CTI1 release-keys
+vendor/bin/pm-proxy|7e0d04f459d17d3e898574e548b02195d678388d
+vendor/bin/pm-service|8a8ecff958c38a24ddb6ea034ed1303b266938a3
+vendor/lib/libperipheral_client.so|22038695c3481456bf20b2cb06a5d144a403f69d
 
 # Postprocessing
 lib/vendor.display.color@1.0.so
