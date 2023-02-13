@@ -1,5 +1,7 @@
 binder_call(hal_gnss_qti, hal_gnss_default)
 
+get_prop(hal_gnss_qti, csc_prop);
+
 allow hal_gnss_qti location_data_file:dir rw_dir_perms;
 allow hal_gnss_qti location_data_file:file rw_file_perms;
 

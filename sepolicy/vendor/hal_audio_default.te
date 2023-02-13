@@ -1,4 +1,6 @@
-allow hal_audio_default hal_bluetooth_a2dp_hwservice:hwservice_manager { add find };
+add_hwservice(hal_audio_default, hal_bluetooth_a2dp_hwservice);
+
+set_prop(hal_audio_default, csc_prop);
 
 allow hal_audio_default sysfs_audio_writable:file r_file_perms;
 

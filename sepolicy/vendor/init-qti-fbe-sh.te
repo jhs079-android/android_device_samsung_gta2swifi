@@ -1,0 +1,1 @@
+allow init-qti-fbe-sh vendor_toolbox_exec:file rx_file_perms;

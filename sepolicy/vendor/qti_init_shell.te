@@ -1,5 +1,8 @@
 allow qti_init_shell mnt_vendor_file:dir create_dir_perms;
-
 allow qti_init_shell sensors_persist_file:dir create_dir_perms;
+
+allow qti_init_shell proc_sched:file w_file_perms;
+allow qti_init_shell sysfs_power:file { w_file_perms setattr };
+allow qti_init_shell sysfs_msm_power:file setattr;
 
 set_prop(qti_init_shell, ctl_default_prop)

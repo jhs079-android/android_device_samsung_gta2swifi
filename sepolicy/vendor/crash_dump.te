@@ -1,0 +1,3 @@
+get_prop(crash_dump, csc_prop);
+get_prop(crash_dump, camera_prop);
+get_prop(crash_dump, hwservicemanager_prop);
