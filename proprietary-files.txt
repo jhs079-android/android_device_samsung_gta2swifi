@@ -810,23 +810,12 @@ vendor/lib/libSubSystemShutdown.so
 vendor/lib/libsubsystem_control.so
 
 # Samsung
-vendor/bin/vendor.samsung.security.sem@1.0-service
-vendor/bin/vendor.samsung.security.skpm@1.0-service
-vendor/bin/vendor.samsung.security.wvkprov_server@1.0-service
-vendor/etc/init/vendor.samsung.security.sem@1.0-service.rc
-vendor/etc/init/vendor.samsung.security.skpm@1.0-service.rc
-vendor/etc/init/vendor.samsung.security.wvkprov_server@1.0-service.rc
 vendor/lib/lib_SoundAlive_3DPosition_ver202.so
 vendor/lib/lib_SoundAlive_SRC384_ver320.so
 vendor/lib/lib_soundaliveresampler.so
-vendor/lib/libremotedesktop_client.knox.samsung.so
-vendor/lib/vendor.samsung.external.secure_storage@2.0.so
 vendor/lib/vendor.samsung.hardware.radio.secbridge@1.0_vendor.so
 vendor/lib/vendor.samsung.hardware.radio.sechook@1.0_vendor.so
 vendor/lib/vendor.samsung.hardware.radio@1.2_vendor.so
-vendor/lib/vendor.samsung.security.sem@1.0.so
-vendor/lib/vendor.samsung.security.skpm@1.0.so
-vendor/lib/vendor.samsung.security.wvkprov_server@1.0.so
 
 # Sensors
 vendor/lib/libsensorlistener.so
