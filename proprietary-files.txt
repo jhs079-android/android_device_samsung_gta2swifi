@@ -625,13 +625,6 @@ lib/vendor.qti.hardware.data.latency@1.0.so
 vendor/lib/vendor.qti.hardware.data.latency@1.0.so
 vendor/lib/vendor.qti.latency@2.0.so
 
-# Light
-vendor/bin/hw/vendor.samsung.hardware.light@2.0-service
-vendor/etc/init/vendor.samsung.hardware.light@2.0-service.rc
-vendor/lib/hw/lights.msm8937.so
-vendor/lib/hw/vendor.samsung.hardware.light@2.0-impl.so
-vendor/lib/vendor.samsung.hardware.light@2.0.so
-
 # Listen
 vendor/lib/libadpcmdec.so
 vendor/lib/libgcs-calwrapper.so

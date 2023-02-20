@@ -133,6 +133,9 @@ BOARD_ROOT_EXTRA_SYMLINKS := \
 BOARD_HAS_QCA_FM_SOC := "cherokee"
 BOARD_HAVE_QCOM_FM := true
 
+# Include override
+TARGET_SPECIFIC_HEADER_PATH := $(DEVICE_PATH)/include
+
 # Graphics
 BOARD_USES_ADRENO := true
 
