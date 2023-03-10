@@ -16,6 +16,7 @@
 
 # inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_n_mr1.mk)
 
 # Inherit from gta2swifi device
 $(call inherit-product, device/samsung/gta2swifi/device.mk)
