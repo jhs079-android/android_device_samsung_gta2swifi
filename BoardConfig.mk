@@ -48,7 +48,7 @@ BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000 --ramdisk_offset 0x02000000 -
 BOARD_KERNEL_IMAGE_NAME := zImage-dtb
 TARGET_KERNEL_ARCH := arm
 TARGET_KERNEL_CONFIG := gta2swifi_sea_open_defconfig
-TARGET_KERNEL_SOURCE := kernel/samsung/msm8917
+TARGET_KERNEL_SOURCE := kernel/samsung/msm8937
 
 # ANT
 BOARD_ANT_WIRELESS_DEVICE := "vfs-prerelease"

@@ -4,7 +4,7 @@
     "target_path": "hardware/samsung"
   },
   {
-    "repository": "android_kernel_samsung_msm8917",
-    "target_path": "kernel/samsung/msm8917"
+    "repository": "android_kernel_samsung_msm8937",
+    "target_path": "kernel/samsung/msm8937"
   }
 ]
