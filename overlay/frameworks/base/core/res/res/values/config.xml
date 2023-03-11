@@ -28,7 +28,7 @@
 
     <!-- Flag indicating whether the we should enable the automatic brightness in Settings.
          Software implementation will be used if config_hardware_auto_brightness_available is not set -->
-     <bool name="config_automatic_brightness_available">true</bool>
+     <bool name="config_automatic_brightness_available">false</bool>
 
     <!-- Boolean indicating if current platform supports HFP inband ringing -->
      <bool name="config_bluetooth_hfp_inband_ringing_support">true</bool>
