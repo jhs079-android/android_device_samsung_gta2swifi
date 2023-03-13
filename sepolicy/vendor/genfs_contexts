@@ -15,6 +15,7 @@ genfscon proc /sys/kernel/sched_upmigrate u:object_r:proc_sched:s0
 genfscon proc /sys/kernel/sched_walt_rotate_big_tasks u:object_r:proc_sched:s0
 genfscon proc /sys/vm/swappiness u:object_r:proc_swappiness:s0
 
+genfscon sysfs /class/input u:object_r:sysfs_input:s0
 genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-00/c440000.qcom,spmi:qcom,pm660@0:qcom,pm660_rtc/rtc/rtc0/alarm_boot u:object_r:sysfs_rtc:s0
 genfscon sysfs /devices/platform/soc/soc:i2c@24/i2c-3/3-0071/power_supply/sm5705-fuelgauge u:object_r:sysfs_battery_supply:s0
 genfscon sysfs /devices/platform/soc/soc:i2c@26/i2c-5/5-0049/sm5705-charger u:object_r:sysfs_battery_supply:s0
@@ -23,6 +24,7 @@ genfscon sysfs /devices/i2c@11/i2c-9/9-0071/power_supply/ u:object_r:sysfs_batte
 genfscon sysfs /devices/soc/78db000.usb/power_supply/ u:object_r:sysfs_usb_supply:s0
 genfscon sysfs /devices/battery/power_supply u:object_r:sysfs_battery_supply:s0
 genfscon sysfs /devices/virtual/camera u:object_r:sysfs_camera_writable:s0
+genfscon sysfs /devices/virtual/input u:object_r:sysfs_input:s0
 genfscon sysfs /devices/virtual/lcd/panel u:object_r:sysfs_lcd_writable:s0
 genfscon sysfs /devices/virtual/sec/sec_key u:object_r:sysfs_sec_key:s0
 genfscon sysfs /devices/virtual/sensors/ssc_core/ssc_hw_rev u:object_r:sysfs_sensors:s0
@@ -32,3 +34,20 @@ genfscon sysfs /power/cpufreq_max_limit u:object_r:sysfs_power:s0
 genfscon sysfs /power/cpufreq_min_limit u:object_r:sysfs_power:s0
 genfscon sysfs /power/cpufreq_table u:object_r:sysfs_power:s0
 genfscon sysfs /wifi u:object_r:sysfs_wifi:s0
+
+genfscon sysfs /class/camera u:object_r:sysfs_camera_writable:s0
+genfscon sysfs /class/cirrus/cirrus_bd u:object_r:sysfs_audio:s0
+genfscon sysfs /class/cirrus/cirrus_cal u:object_r:sysfs_audio:s0
+genfscon sysfs /class/cirrus/cirrus_pwr u:object_r:sysfs_audio:s0
+genfscon sysfs /class/lcd u:object_r:sysfs_lcd_writable:s0
+genfscon sysfs /class/power_supply u:object_r:sysfs_batteryinfo:s0
+genfscon sysfs /class/power_supply/battery u:object_r:sysfs_batteryinfo:s0
+genfscon sysfs /class/rfkill/rfkill[0-9]+/state u:object_r:sysfs_bluetooth_writable:s0
+genfscon sysfs /class/rfkill/rfkill[0-9]+/type u:object_r:sysfs_bluetooth_writable:s0
+genfscon sysfs /devices/platform/soc/soc:battery/power_supply u:object_r:sysfs_batteryinfo:s0
+genfscon sysfs /devices/virtual/audio/earjack/state u:object_r:sysfs_audio_writable:s0
+genfscon sysfs /devices/virtual/fingerprint/fingerprint u:object_r:sysfs_fpc:s0
+genfscon sysfs /devices/virtual/mdnie u:object_r:sysfs_mdnie_writable:s0
+genfscon sysfs /devices/virtual/sec/sec_keypad u:object_r:sysfs_sec_keypad:s0
+genfscon sysfs /devices/virtual/sec/switch u:object_r:sysfs_sec_switch:s0
+genfscon sysfs /devices/virtual/sec/tsp u:object_r:sysfs_tsp:s0

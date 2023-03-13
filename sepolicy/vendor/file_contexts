@@ -180,22 +180,3 @@
 /firmware(/.*)?    u:object_r:firmware_file:s0
 /bt_firmware(/.*)?                                  u:object_r:bt_firmware_file:s0
 /persist(/.*)?        u:object_r:mnt_vendor_file:s0
-
-# Sys
-/sys/class/camera(/.*)?                                     --  u:object_r:sysfs_camera_writable:s0
-/sys/class/cirrus/cirrus_bd(/.*)?                               u:object_r:sysfs_audio:s0
-/sys/class/cirrus/cirrus_cal(/.*)?                              u:object_r:sysfs_audio:s0
-/sys/class/cirrus/cirrus_pwr(/.*)?                              u:object_r:sysfs_audio:s0
-/sys/class/lcd(/.*)?                                        --  u:object_r:sysfs_lcd_writable:s0
-/sys/class/power_supply(/.*)?                               --  u:object_r:sysfs_batteryinfo:s0
-/sys/class/power_supply/battery(/.*)?                       --  u:object_r:sysfs_batteryinfo:s0
-/sys/class/rfkill/rfkill[0-9]+/state                        --  u:object_r:sysfs_bluetooth_writable:s0
-/sys/class/rfkill/rfkill[0-9]+/type                         --  u:object_r:sysfs_bluetooth_writable:s0
-/sys/devices/platform/soc/soc:battery/power_supply(/.*)?    --  u:object_r:sysfs_batteryinfo:s0
-/sys/devices/virtual/audio/earjack/state                        u:object_r:sysfs_audio_writable:s0
-/sys/devices/virtual/fingerprint/fingerprint(/.*)?              u:object_r:sysfs_fpc:s0
-/sys/devices/virtual/lcd/panel(/.*)?                            u:object_r:sysfs_lcd_writable:s0
-/sys/devices/virtual/mdnie(/.*)?                            --  u:object_r:sysfs_mdnie_writable:s0
-/sys/devices/virtual/sec/sec_keypad(/.*)?                       u:object_r:sysfs_sec_keypad:s0
-/sys/devices/virtual/sec/switch(/.*)?                           u:object_r:sysfs_sec_switch:s0
-/sys/devices/virtual/sec/tsp(/.*)?                              u:object_r:sysfs_tsp:s0
