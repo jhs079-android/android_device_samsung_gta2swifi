@@ -47,7 +47,7 @@ BOARD_KERNEL_PAGESIZE := 2048
 BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000 --ramdisk_offset 0x02000000 --tags_offset 0x01e00000
 BOARD_KERNEL_IMAGE_NAME := zImage-dtb
 TARGET_KERNEL_ARCH := arm
-TARGET_KERNEL_CONFIG := gta2swifi_sea_open_defconfig
+TARGET_KERNEL_CONFIG := lineageos_gta2swifi_defconfig
 TARGET_KERNEL_SOURCE := kernel/samsung/msm8937
 
 # ANT
