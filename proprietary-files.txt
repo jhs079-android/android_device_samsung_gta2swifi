@@ -720,6 +720,7 @@ vendor/lib/vendor.display.postproc@1.0.so
 # Power
 vendor/bin/hw/vendor.samsung.hardware.miscpower@1.0-service
 vendor/etc/init/vendor.samsung.hardware.miscpower@1.0-service.rc
+vendor/lib/hw/power.qcom.so
 vendor/lib/vendor.samsung.hardware.miscpower@1.0.so
 
 # QMI
