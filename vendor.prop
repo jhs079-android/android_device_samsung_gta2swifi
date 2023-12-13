@@ -35,6 +35,9 @@ vendor.voice.playback.conc.disabled=true
 vendor.voice.record.conc.disabled=false
 vendor.voice.voip.conc.disabled=true
 
+# Camera
+persist.camera.HAL3.enabled=1
+
 # Dalvik
 ro.dalvik.vm.native.bridge=0
 
