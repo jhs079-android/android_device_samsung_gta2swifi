@@ -1,5 +1,4 @@
-# Imported from msm8917-common by samsung-msm8937-devs
-# Proprietary files - from Samsung package version T380XAR4CUA2, unless pinned
+# Proprietary files - from Samsung package version T380DXS4CUD3, unless pinned
 
 # ACDB
 vendor/etc/Bluetooth_cal.acdb
