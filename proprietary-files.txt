@@ -454,11 +454,6 @@ vendor/lib/mediadrm/libdrmclearkeyplugin.so
 vendor/lib/mediadrm/libwvdrmengine.so
 vendor/lib/libwvhidl.so
 
-# Device Health
-vendor/bin/hw/android.hardware.health@2.0-service.samsung
-vendor/etc/init/android.hardware.health@2.0-service.samsung.rc
-vendor/lib/vendor.samsung.hardware.exthealth@1.0.so
-
 # ESE-Powermanager
 vendor/lib/vendor.qti.esepowermanager@1.0.so
 
