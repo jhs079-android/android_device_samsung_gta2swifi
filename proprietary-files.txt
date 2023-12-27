@@ -447,13 +447,6 @@ vendor/lib/libsecureui_svcsock.so
 vendor/lib/libssd.so
 vendor/lib/libtzdrmgenprov.so
 
-# DRM (Widevine)
-vendor/bin/hw/android.hardware.drm@1.1-service.widevine
-vendor/etc/init/android.hardware.drm@1.1-service.widevine.rc
-vendor/lib/mediadrm/libdrmclearkeyplugin.so
-vendor/lib/mediadrm/libwvdrmengine.so
-vendor/lib/libwvhidl.so
-
 # ESE-Powermanager
 vendor/lib/vendor.qti.esepowermanager@1.0.so
 
@@ -869,6 +862,13 @@ vendor/lib/vendor.qti.voiceprint@1.0.so
 
 # WFD
 vendor/lib/libhdcpsrm.so
+
+# Widevine - from daisy_sprout - daisy-user 10 QKQ1.191002.002 V11.0.2.0.QDLMIXM release-keys
+vendor/bin/hw/android.hardware.drm@1.2-service.widevine|e130b8f1c8d46d8a185b00cba5ff8a2a871ee94c
+vendor/etc/init/android.hardware.drm@1.2-service.widevine.rc|68767969f86126ada017fc09af151e299db651d5
+vendor/lib/mediadrm/libwvdrmengine.so|85158394bd70442877d0fc2e29908cea97dff644|3fac3fa919b3680fdbde4bb8880d3488ae801863
+vendor/lib64/libwvhidl.so|d02a20d8e95e64c391e0af86a32dad869ceeb3b4|49a0809664fc7d58c5b17a73c52a071f5d6a8571
+vendor/lib64/mediadrm/libwvdrmengine.so|fd53782817acdb28b690af2b9cc9870df1e9ba47|77ecb3694aa9f60682c6de30322ced8f0da017ce
 
 # rootdir
 vendor/bin/adpl

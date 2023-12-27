@@ -61,10 +61,10 @@ function blob_fixup() {
         vendor/lib/hw/audio.primary.msm8937.so)
             "${PATCHELF}" --remove-needed libaudio_soundtrigger.so "${2}"
             ;;
-        vendor/lib/libwvhidl.so)
+        vendor/lib/mediadrm/libwvdrmengine.so|vendor/lib64/mediadrm/libwvdrmengine.so)
             "${PATCHELF}" --replace-needed "libprotobuf-cpp-lite.so" "libprotobuf-cpp-lite-v29.so" "${2}"
             ;;
-        vendor/lib/mediadrm/libwvdrmengine.so)
+        vendor/lib64/libwvhidl.so)
             "${PATCHELF}" --replace-needed "libprotobuf-cpp-lite.so" "libprotobuf-cpp-lite-v29.so" "${2}"
             ;;
     esac
