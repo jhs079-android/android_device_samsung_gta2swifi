@@ -315,12 +315,9 @@ PRODUCT_PACKAGES += \
 
 # RIL
 PRODUCT_PACKAGES += \
-    vendor.samsung.hardware.radio@1.2.vendor \
-    libjson \
-    librmnetctl \
     libxml2 \
     libprotobuf-cpp-full \
-    libshims_ril
+    libqti_vndfwk_detect
 
 # Seccomp
 PRODUCT_COPY_FILES += \
