@@ -359,20 +359,18 @@ PRODUCT_COPY_FILES += \
 
 # Wifi
 PRODUCT_PACKAGES += \
+    android.hardware.wifi@1.0-service \
     libcld80211 \
+    libQWiFiSoftApCfg \
+    libwifi-hal-ctrl \
     libwpa_client \
     hostapd \
-    macloader \
+    dhcpcd.conf \
+    wcnss_service \
     wificond \
-    libwifi-hal-qcom \
-    wcnss_service  \
+    WifiOverlay \
     wpa_supplicant \
     wpa_supplicant.conf
-
-PRODUCT_PACKAGES += \
-    android.hardware.wifi@1.0-service \
-    vendor.qti.hardware.wifi.hostapd@1.0.vendor \
-    vendor.qti.hardware.wifi.supplicant@2.0.vendor
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/wifi/indoorchannel.info:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/indoorchannel.info \

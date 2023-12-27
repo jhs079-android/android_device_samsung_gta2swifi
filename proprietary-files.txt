@@ -870,9 +870,6 @@ vendor/lib/vendor.qti.voiceprint@1.0.so
 # WFD
 vendor/lib/libhdcpsrm.so
 
-# WiFi
-vendor/bin/cnss_diag
-
 # rootdir
 vendor/bin/adpl
 
@@ -917,5 +914,4 @@ vendor/lib/libsecnativefeature.so
 vendor/lib/libsecure_storage.so
 vendor/lib/libsi.so
 vendor/lib/libucsengine.so
-vendor/lib/libwifi-hal.so
 vendor/lib/libwpa_drv_oem.so
