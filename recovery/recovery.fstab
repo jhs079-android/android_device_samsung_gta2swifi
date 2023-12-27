@@ -39,6 +39,6 @@
 /dev/block/bootdevice/by-name/carrier      /carrier        ext4    defaults                                                        defaults
 
 #Auto-generated code by FOTA Portal
-#/dev/block/bootdevice/by-name/misc         /misc           emmc    defaults                                                        defaults
+/dev/block/bootdevice/by-name/fota         /misc           emmc    defaults                                                        defaults
 /dev/block/bootdevice/by-name/hidden	   /preload        ext4    defaults                                                        defaults
 
