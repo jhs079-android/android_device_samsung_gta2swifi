@@ -641,16 +641,16 @@ vendor/lib/libOmxVpp.so
 vendor/lib/libOmxWmaDec.so
 
 # Perf - from daisy_sprout - daisy-user 10 QKQ1.191002.002 V11.0.2.0.QDLMIXM release-keys
-vendor/bin/energy-awareness|def07e366347c7f0a7778b748acb49557ab21d2a
 vendor/bin/hw/vendor.qti.hardware.perf@2.0-service|5c2593e17b8dac6e4e660478b419bf367d6c5c40
+vendor/bin/energy-awareness|def07e366347c7f0a7778b748acb49557ab21d2a
 vendor/bin/msm_irqbalance|b5e55b4b0934b65b7dd5d2201f9a70f6f77a4e7c
 vendor/etc/init/vendor.qti.hardware.perf@2.0-service.rc|cc8658db5e19f8e5e575fb986e7d38147e675f8d
-vendor/etc/msm_irqbalance.conf|3e45e1da03ab49ce9d3f855011aca00f1e417a53
 vendor/etc/perf/commonresourceconfigs.xml|d9fc3b49481536d6c7a25eb13f9f1d52d3ee8ff1
 vendor/etc/perf/perfboostsconfig.xml|429d7e2032a494eff1f8d0c039fa839082145b59
 vendor/etc/perf/perfconfigstore.xml|207ff980c296f4935928dd2f06e085b33bf59755
 vendor/etc/perf/targetconfig.xml|aa20c25397df1455206965737f82d44d44430e45
 vendor/etc/perf/targetresourceconfigs.xml|d9f9815764725df55e748bf4af4829e609dac853
+vendor/etc/msm_irqbalance.conf|3e45e1da03ab49ce9d3f855011aca00f1e417a53
 vendor/lib/libperfconfig.so|11f6ec2d7da51872dad2f016a6638df209adca14
 vendor/lib/libperfgluelayer.so|5c9db256d92ddf5bce65941f2cad5eaeb4f028fd
 vendor/lib/libqti-perfd-client.so|a6ddd909d581fbb5d8caa2f1f489ec5c2c5789c1
@@ -765,10 +765,10 @@ vendor/etc/thermal-engine.conf
 
 # Thermal - from daisy_sprout - daisy-user 10 QKQ1.191002.002 V11.0.2.0.QDLMIXM release-keys
 vendor/bin/thermal-engine|4ab3c410fbcf9f8cae711ea4ba16cd2797712de6
-vendor/lib64/libthermalfeature.so|829b2fc0aa8c863d4b4b331e0a2c00663e01efe6
-vendor/lib64/libthermalioctl.so|24b22582f3f77769c5fbca06fcc1d3b6533cdf40
 -vendor/lib/libthermalclient.so|6077e27e15d9e3e43fa57d6d5405c49284f48949
 -vendor/lib64/libthermalclient.so|12b26d4242b1a8913ddcb511f42a1debb83689af
+vendor/lib64/libthermalfeature.so|829b2fc0aa8c863d4b4b331e0a2c00663e01efe6
+vendor/lib64/libthermalioctl.so|24b22582f3f77769c5fbca06fcc1d3b6533cdf40
 
 # Time - from daisy_sprout - daisy-user 10 QKQ1.191002.002 V11.0.2.0.QDLMIXM release-keys
 vendor/lib/libtime_genoff.so|a574d287e7e73649685b702f4fe497eb7c6ba727
@@ -794,8 +794,8 @@ vendor/lib/libhdcpsrm.so
 vendor/bin/hw/android.hardware.drm@1.2-service.widevine|e130b8f1c8d46d8a185b00cba5ff8a2a871ee94c
 vendor/etc/init/android.hardware.drm@1.2-service.widevine.rc|68767969f86126ada017fc09af151e299db651d5
 vendor/lib/mediadrm/libwvdrmengine.so|85158394bd70442877d0fc2e29908cea97dff644|3fac3fa919b3680fdbde4bb8880d3488ae801863
-vendor/lib64/libwvhidl.so|d02a20d8e95e64c391e0af86a32dad869ceeb3b4|49a0809664fc7d58c5b17a73c52a071f5d6a8571
 vendor/lib64/mediadrm/libwvdrmengine.so|fd53782817acdb28b690af2b9cc9870df1e9ba47|77ecb3694aa9f60682c6de30322ced8f0da017ce
+vendor/lib64/libwvhidl.so|d02a20d8e95e64c391e0af86a32dad869ceeb3b4|49a0809664fc7d58c5b17a73c52a071f5d6a8571
 
 # rootdir
 vendor/bin/adpl
