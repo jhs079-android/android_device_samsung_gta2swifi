@@ -713,10 +713,11 @@ vendor/lib/libqti-util.so
 vendor/lib/libqti-utils.so
 vendor/lib/vendor.qti.hardware.perf@1.0.so
 
-# Peripheral Manager - from j6primelte - j6primelteub-user 10 QP1A.190711.020 J610GUBU4CTI1 release-keys
-vendor/bin/pm-proxy|7e0d04f459d17d3e898574e548b02195d678388d
-vendor/bin/pm-service|8a8ecff958c38a24ddb6ea034ed1303b266938a3
-vendor/lib/libperipheral_client.so|22038695c3481456bf20b2cb06a5d144a403f69d
+# Peripheral Manager - from daisy_sprout - daisy-user 10 QKQ1.191002.002 V11.0.2.0.QDLMIXM release-keys
+vendor/bin/pm-proxy|1f216a6f54e9b97c026f3f3bc4d7d441d58d90a7
+vendor/bin/pm-service|8a521f14576d0d2edf03b4500a54379d37e15d4e
+vendor/lib/libperipheral_client.so|b75a6adac094ddcd6ded9415cae83e18d1e7e5d0
+vendor/lib64/libperipheral_client.so|20c8ab21fe28e41f60b59af0ba72de9f6b1996d2
 
 # Postprocessing
 lib/vendor.display.color@1.0.so
