@@ -737,7 +737,6 @@ vendor/lib/vendor.samsung.hardware.radio@1.2_vendor.so
 # Sensors
 vendor/lib/hw/sensors.msm8937.so
 vendor/lib/libsensorlistener.so
-vendor/lib/libsensorndkbridge.so
 vendor/lib/vendor.qti.hardware.sensorscalibrate@1.0.so
 
 # Soter
