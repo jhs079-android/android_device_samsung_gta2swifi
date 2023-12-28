@@ -23,6 +23,7 @@
 #include <mutex>
 #include <thread>
 #include <vector>
+#include <fstream>
 
 using ::android::hardware::sensors::V1_0::OperationMode;
 using ::android::hardware::sensors::V1_0::Result;
@@ -86,6 +87,32 @@ class OneShotSensor : public Sensor {
     virtual void batch(int32_t /* samplingPeriodNs */) override {}
 
     virtual Result flush() override { return Result::BAD_VALUE; }
+};
+
+const std::string kAccelPath = "/sys/class/sensors/accelerometer_sensor/";
+const std::string kAccelDataPath = kAccelPath + "raw_data";
+const std::string kAccelModePath = kAccelPath + "reactive_alert";
+
+enum K2HHReactiveAlertType {
+  K2HH_DISABLE = 0,
+  K2HH_ENABLE,
+  K2HH_FACTORY
+};
+
+class AccelSensor : public Sensor {
+  public:
+    AccelSensor(int32_t sensorHandle, ISensorsEventCallback* callback);
+    virtual ~AccelSensor() override;
+
+    virtual void activate(bool enable) override;
+
+    virtual Result flush() override { return Result::BAD_VALUE; }
+  protected:
+    virtual std::vector<Event> readEvents() override;
+
+  private:
+    std::ofstream mEnableStream;
+    int mDataFd;
 };
 
 }  // namespace implementation

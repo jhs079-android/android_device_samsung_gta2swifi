@@ -18,8 +18,11 @@
 
 #include <hardware/sensors.h>
 #include <utils/SystemClock.h>
+#include <log/log.h>
 
+#include <android-base/strings.h>
 #include <cmath>
+#include <fcntl.h>
 
 namespace android {
 namespace hardware {
@@ -189,6 +192,79 @@ OneShotSensor::OneShotSensor(int32_t sensorHandle, ISensorsEventCallback* callba
     mSensorInfo.minDelay = -1;
     mSensorInfo.maxDelay = 0;
     mSensorInfo.flags |= SensorFlagBits::ONE_SHOT_MODE;
+}
+
+AccelSensor::AccelSensor(int32_t sensorHandle, ISensorsEventCallback* callback)
+    : Sensor(sensorHandle, callback) {
+    mSensorInfo.name = "K2HH Accelerometer";
+    mSensorInfo.type = SensorType::ACCELEROMETER;
+    mSensorInfo.minDelay = 5000;
+    mSensorInfo.maxDelay = 200000;
+    mSensorInfo.flags |= SensorFlagBits::CONTINUOUS_MODE;
+
+    mEnableStream.open(kAccelModePath);
+    if(mEnableStream.fail()) {
+        ALOGE("Failed to open %s", kAccelModePath.c_str());
+        mStopThread = true;
+        return;
+    }
+    mDataFd = open(kAccelDataPath.c_str(), O_RDONLY);
+    if(mDataFd < 0) {
+        ALOGE("Failed to open %s", kAccelDataPath.c_str());
+        mStopThread = true;
+        return;
+    }
+
+}
+
+AccelSensor::~AccelSensor() {
+    close(mDataFd);
+}
+
+void AccelSensor::activate(bool enable) {
+    std::lock_guard<std::mutex> lock(mRunMutex);
+
+    if (mIsEnabled != enable) {
+        mIsEnabled = enable;
+
+        mWaitCV.notify_all();
+
+        if (mEnableStream) {
+            mEnableStream << (enable ? K2HH_ENABLE : K2HH_DISABLE) << std::flush;
+        }
+    }
+}
+
+std::vector<Event> AccelSensor::readEvents() {
+    std::vector<Event> events;
+    Event event;
+    int rc;
+    // this is probably enough...
+    char cAccelData[50];
+    std::string accelData;
+    std::vector<std::string> accelDataSplit;
+
+    event.sensorHandle = mSensorInfo.sensorHandle;
+    event.sensorType = mSensorInfo.type;
+    event.timestamp = ::android::elapsedRealtimeNano();
+
+    rc = lseek(mDataFd, 0, SEEK_SET);
+    if(rc) {
+        ALOGE("Failed to seek: %d", rc);
+        goto end;
+    }
+
+    rc = read(mDataFd, cAccelData, sizeof(cAccelData));
+    accelData = cAccelData;
+
+    accelDataSplit = android::base::Split(accelData, " ");
+    event.u.vec3.x = std::stof(accelDataSplit.at(0));
+    event.u.vec3.y = std::stof(accelDataSplit.at(1));
+    event.u.vec3.z = std::stof(accelDataSplit.at(2));
+    events.push_back(event);
+
+end:
+    return events;
 }
 
 }  // namespace implementation
