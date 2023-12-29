@@ -53,9 +53,11 @@ if [ -z "${SRC}" ]; then
     SRC="adb"
 fi
 
+# SigScan from https://github.com/luk1337/SigScan
 function blob_fixup() {
     case "${1}" in
         vendor/lib/hw/camera.msm8937.so)
+            SigScan -p "2D E9 F0 47 37 4D" -P "4F F0 00 00 70 47" -f "${2}"
             "${PATCHELF}" --add-needed "libcamera_shim.so" "${2}"
             ;;
         vendor/lib/hw/audio.primary.msm8937.so)
