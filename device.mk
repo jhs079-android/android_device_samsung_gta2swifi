@@ -104,7 +104,7 @@ PRODUCT_COPY_FILES += \
 # Bluetooth
 PRODUCT_PACKAGES += \
     libbt-vendor \
-    vendor.qti.hardware.btconfigstore@1.0.vendor
+    vendor.qti.hardware.btconfigstore@1.0
 
 # Camera
 PRODUCT_PACKAGES += \
@@ -185,9 +185,7 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     libhidltransport \
-    libhidltransport.vendor \
-    libhwbinder \
-    libhwbinder.vendor
+    libhwbinder
 
 # IRQ
 PRODUCT_COPY_FILES += \
@@ -272,7 +270,7 @@ PRODUCT_COPY_FILES += \
 # Power
 PRODUCT_PACKAGES += \
     android.hardware.power-service-qti \
-    vendor.qti.hardware.perf@2.0.vendor
+    vendor.qti.hardware.perf@2.0
 
 # Public Libraries
 PRODUCT_COPY_FILES += \
@@ -356,7 +354,7 @@ PRODUCT_PACKAGES += \
 
 # Vendor libstdc++
 PRODUCT_PACKAGES += \
-    libstdc++.vendor
+    libstdc++
 
 # VNDK
 PRODUCT_COPY_FILES += \
