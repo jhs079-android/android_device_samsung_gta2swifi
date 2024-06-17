@@ -1,14 +1,13 @@
 # Proprietary files - from Samsung package version T380DXS4CUD3, unless pinned
 
 # ACDB
-vendor/etc/Bluetooth_cal.acdb
-vendor/etc/General_cal.acdb
-vendor/etc/Global_cal.acdb
-vendor/etc/Handset_cal.acdb
-vendor/etc/Hdmi_cal.acdb
-vendor/etc/Headset_cal.acdb
-vendor/etc/Speaker_cal.acdb
-vendor/etc/workspaceFile.qwsp
+vendor/etc/Bluetooth_cal.acdb:vendor/etc/acdbdata/Bluetooth_cal.acdb
+vendor/etc/General_cal.acdb:vendor/etc/acdbdata/General_cal.acdb
+vendor/etc/Global_cal.acdb:vendor/etc/acdbdata/Global_cal.acdb
+vendor/etc/Handset_cal.acdb:vendor/etc/acdbdata/Handset_cal.acdb
+vendor/etc/Hdmi_cal.acdb:vendor/etc/acdbdata/Hdmi_cal.acdb
+vendor/etc/Headset_cal.acdb:vendor/etc/acdbdata/Headset_cal.acdb
+vendor/etc/Speaker_cal.acdb:vendor/etc/acdbdata/Speaker_cal.acdb
 
 # ADSP - from daisy_sprout - daisy-user 10 QKQ1.191002.002 V11.0.2.0.QDLMIXM release-keys
 vendor/bin/adsprpcd|a5e878691577485c9f7ee33dfe02384a13f0a265
