@@ -781,7 +781,6 @@ vendor/bin/adpl
 vendor/bin/PktRspTest
 vendor/bin/StoreKeybox
 vendor/bin/athdiag
-vendor/bin/cplay
 vendor/bin/diag_callback_sample
 vendor/bin/diag_dci_sample
 vendor/bin/diag_klog
